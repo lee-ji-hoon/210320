@@ -6,5 +6,10 @@
     "trailingComma": "all",
     "endOfLine": "lf",
     "semi": false,
-    "arrowParens": "always"
+    "arrowParens": "always",
+
+    "scripts": {
+      "lint": "eslint .",
+      "prettier": "prettier ."
+  }
   }
