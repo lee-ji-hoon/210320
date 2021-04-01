@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: path.resolve(__dirname, './src'), // 누구를 기준으로 번들링 할 것인가 ?
@@ -19,5 +20,18 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.css'], // 확장자 생략
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './public/index.html'),
+      filename: './index.html',
+    }),
+  ],
+  devServer: {
+    contentBase: path.resolve(__dirname, 'dist'),
+    inline: true,
+    hot: true,
+    open: true,
+    port: 8888,
   },
 }

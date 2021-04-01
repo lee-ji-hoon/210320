@@ -1,6 +1,6 @@
-import add from './add'
-import { sub, sub2 } from './sub'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-console.log(add(10, 5))
-console.log(sub(10, 5))
-console.log(sub2(10, 5))
+import WebtoonMaker from './pages/webtoon-maker'
+
+ReactDOM.render(<WebtoonMaker />, document.getElementById('app'))
